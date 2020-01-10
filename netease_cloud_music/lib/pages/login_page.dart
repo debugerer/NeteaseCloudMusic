@@ -141,16 +141,17 @@ class __LoginWidgetState extends State<_LoginWidget> {
                     Utils.showToast('请输入账号或者密码');
                     return;
                   }
-                  value.login(
-                    context,
-                    phone,
-                    pwd,
-                  ).then((value){
-                    if(value != null){
-                      Provider.of<PlayListModel>(context).user = value;
-                      NavigatorUtil.goHomePage(context);
-                    }
-                  });
+                  NavigatorUtil.goHomePage(context);
+                  // value.login(
+                  //   context,
+                  //   phone,
+                  //   pwd,
+                  // ).then((value){
+                  //   if(value != null){
+                  //     Provider.of<PlayListModel>(context).user = value;
+                  //     NavigatorUtil.goHomePage(context);
+                  //   }
+                  // });
                 },
                 content: 'Login',
                 width: double.infinity,
